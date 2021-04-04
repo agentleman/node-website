@@ -1,5 +1,38 @@
 <div class="home">
-  <!-- <img alt="Vue logo" src="../assets/logo.png"> -->
-  <span @click="storeClick">click</span>
-  <HelloWorld msg="Welcome to Your Vue.js App" />
+  <HeaderView />
+  <SearchBar />
+  <TabBar />
+  <CarouselItem />
+  <!-- <HelloWorld msg="Welcome to Your Vue.js App" /> -->
+  <el-row style="text-align: center;background: #fff;width: 80%;margin: auto;">
+    <h3>精选专辑</h3>
+  </el-row>
+  <el-row style="width: 80%;margin: auto;">
+    <el-col :span="6" v-for="(o, index) in 4" :key="o">
+      <el-card :body-style="{ padding: '0px' }">
+        <!-- <img src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png" class="image"> -->
+        <img src="../../assets/card2.png" alt="" class="image" />
+        <div style="padding: 14px;">
+          <span>好吃的汉堡</span>
+          <div class="bottom clearfix">
+            <time class="time">{{ currentDate }}</time>
+            <!-- <el-button type="text" class="button">操作按钮</el-button> -->
+          </div>
+        </div>
+      </el-card>
+    </el-col>
+  </el-row>
+  <el-row style="width: 80%;margin: auto;">
+    <el-col :span="6">
+      <div class="grid-content bg-purple">
+        <h3 style="margin: 0;">热门推荐</h3>
+      </div>
+    </el-col>
+    <el-col :span="6">
+      <div class="grid-content bg-purple-light">36</div>
+    </el-col>
+    <el-col :span="6">
+      <div class="grid-content bg-purple">5</div>
+    </el-col>
+  </el-row>
 </div>
